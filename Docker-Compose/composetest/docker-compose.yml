@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    # build: .
+    image: composetest:latest
+    ports:
+      - 5000:5000
+    # volumes:
+    #   # The new volumes key mounts the project directory (current directory) on the host to /code inside the container, allowing you to modify the code on the fly, without having to rebuild the image.
+    #   - .:/code
+  redis:
+    image: redis:alpine
